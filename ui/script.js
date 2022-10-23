@@ -50,20 +50,20 @@ function objectifyScrapedData(list) {
 }
 
 // script
-
-urlBox.addEventListener("input", () => {
+const urlBoxChanger = () => {
     //alert(urlBox.value)
     if (urlBox.value == '') {
         optionsBox.style.display = 'none'
     } else {
         optionsBox.style.display = 'flex'
     }
-})
+}
+urlBox.addEventListener("input", urlBoxChanger)
 
 function generateCard(url, name, price, targetprice) {
-    if (!url.includes('https://') && !url.includes('http://')) {
+    /*if (!url.includes('https://') && !url.includes('http://')) {
         url = 'http://' + url;
-    }
+    }*/
 
     if (price < targetprice) {
         var isDeal = true
@@ -76,7 +76,7 @@ function generateCard(url, name, price, targetprice) {
             <div class = "priceCardFlex">
                 <button class = "deleteButton" name="${name}">×</button>
                 <p id = "priceNameHeader"><a href="${url}">${name}</a></p>
-                <p class="bodyText">Current Price: <span ${isDeal ? ' class="isDeal"' : ''}>${price}</span></p>
+                <p class="bodyText ${isDeal ? "isDeal" : ''}">Current Price: $<span>${price === undefined ? 'Please Refresh' : price}</span></p>
                 <p class="bodyText">Target Price: $${targetprice}</p>
             </div>
         </div>
@@ -121,7 +121,8 @@ document.getElementById('store-btn').addEventListener('click', async () => {
     }
 })
 
-document.getElementById('cached-btn').addEventListener('click', async () => {
+const cachedButton = document.getElementById('cached-btn')
+cachedButton.addEventListener('click', async () => {
     let res = await fetch(serverURL('/cached'))
     res = await res.json()
     if (res === false) {
@@ -158,6 +159,14 @@ document.getElementById('refresh-btn').addEventListener('click', async () => {
     }
 })
 
+const resetOptionsBox = () => {
+    urlBox.value = ''
+    urlBoxChanger()
+    targetpriceBox.value = ''
+    inputBox.value = ''
+    selectorBox.value = ''
+}
+
 addbutton.addEventListener('click', async () => {
     const url = urlBox.value
     if (!isValidHttpUrl(url)) {
@@ -173,15 +182,24 @@ addbutton.addEventListener('click', async () => {
     const selector = selectorBox.value
     let res = await fetch(serverURL(`/add`), {
         method: 'POST',
-        body: {
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
             name,
             url,
             targetprice,
             selector
-        }
+        })
     })
     res = await res.json()
     products = res
     refreshCards()
+    resetOptionsBox()
 })
 
+// initial script
+fetch(serverURL('/currentProducts')).then(async res => {
+    products = await res.json()
+    cachedButton.click()
+})

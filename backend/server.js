@@ -13,7 +13,8 @@ const DEFAULT_CSV = "/Users/siraire/Code/price-tracker/track.csv"
 // const SCRAPER_PATH = "/Users/siraire/Code/price-tracker/pricetracker/test.py"
 
 const app = express()
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use(cors())
 
 let scraperData = null
@@ -47,7 +48,7 @@ app.get('/load', (req, res) => {
 
 // stores current `products` into the csv
 app.get('/store', (req, res) => {
-  const filepath = DEFAULT_CSV + '1'
+  const filepath = DEFAULT_CSV
   const writer = createCsvWriter({
     path: filepath,
     header: [
@@ -61,6 +62,10 @@ app.get('/store', (req, res) => {
     .writeRecords(Object.keys(products).map(key => products[key]))
     .then(() => res.json(true))
     .catch((e) => res.send(e))
+})
+
+app.get('/currentProducts', (req, res) => {
+  res.json(products)
 })
 
 // add a new product to track, if name already exists, it'll replace it
@@ -104,6 +109,7 @@ app.get('/refresh', (req, res) => {
   python.stdout.on('data', (data) => {
     scraperData = JSON.parse(data.toString())
     lastScraped = new Date()
+    console.log(scraperData)
     res.json(scraperData)
   })
   python.stderr.on('data', (data) => {

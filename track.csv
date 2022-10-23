@@ -1,7 +1,9 @@
 name,url,selector,targetprice
-pumpkin bucket,https://www.target.com/p/orange-pumpkin-stackable-halloween-trick-or-treat-pail-hyde-38-eek-boutique-8482/-/A-78825535#lnk=sametab,,
-boy brow,https://www.glossier.com/products/boy-brow,.product__price--regular,
-mario softsculpt,https://www.sephora.com/product/makeup-by-mario-soft-sculpt-shaping-stick-P472327?icid2=homepage_productlist_sellingfast_us_rwd_092022,[data-comp="Price "] b,
-awesome book,https://www.amazon.com/Diper-%C3%96verl%C3%B6de-Diary-Wimpy-Book/dp/141976294X/?_encoding=UTF8&pd_rd_w=71Dnc&content-id=amzn1.sym.64be5821-f651-4b0b-8dd3-4f9b884f10e5&pf_rd_p=64be5821-f651-4b0b-8dd3-4f9b884f10e5&pf_rd_r=CQG8DPPYAYJW1SJMNF5Y&pd_rd_wg=WGsNF&pd_rd_r=f65c0405-f863-4723-b3df-d44c7449fdaa&ref_=pd_gw_crs_zg_bs_283155,.a-color-price.header-price.a-text-normal,
-lavender kbd67lite,https://kbdfans.com/collections/kbd67-lite/products/kbd67-lite-lavender-version,,
-iphone 14,https://www.target.com/p/total-by-verizon-prepaid-apple-iphone-se-2nd-gen-64gb-black/-/A-86947365#lnk=sametab,,
+pumpkin bucket,https://www.target.com/p/orange-pumpkin-stackable-halloween-trick-or-treat-pail-hyde-38-eek-boutique-8482/-/A-78825535#lnk=sametab,,1
+boy brow,https://www.glossier.com/products/boy-brow,.product__price--regular,15
+mario softsculpt,https://www.sephora.com/product/makeup-by-mario-soft-sculpt-shaping-stick-P472327?icid2=homepage_productlist_sellingfast_us_rwd_092022,"[data-comp=""Price ""] b",20
+awesome book,https://www.amazon.com/Diper-%C3%96verl%C3%B6de-Diary-Wimpy-Book/dp/141976294X/?_encoding=UTF8&pd_rd_w=71Dnc&content-id=amzn1.sym.64be5821-f651-4b0b-8dd3-4f9b884f10e5&pf_rd_p=64be5821-f651-4b0b-8dd3-4f9b884f10e5&pf_rd_r=CQG8DPPYAYJW1SJMNF5Y&pd_rd_wg=WGsNF&pd_rd_r=f65c0405-f863-4723-b3df-d44c7449fdaa&ref_=pd_gw_crs_zg_bs_283155,.a-color-price.header-price.a-text-normal,8
+lavender kbd67lite,https://kbdfans.com/collections/kbd67-lite/products/kbd67-lite-lavender-version,,60
+iphone 14,https://www.target.com/p/total-by-verizon-prepaid-apple-iphone-se-2nd-gen-64gb-black/-/A-86947365#lnk=sametab,,600
+hat,https://store.nytimes.com/collections/best-sellers/products/stacked-logo-baseball-cap?variant=47552423496,,40
+gt pants,https://gatech.spirit.bncollege.com/ga-tech-yellow-jackets-mens-concepts-sport-navy/white-georgia-tech-yellow-jackets-tradition-woven-pants/t-23839830+p-0460181360743+z-9-479651047?_ref=p-GALP:m-GRID:i-r0c2:po-2,"[data-talos=""pdpProductPrice""] .sr-only",15
