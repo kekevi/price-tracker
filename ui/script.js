@@ -33,9 +33,10 @@ function generateCard(url, inputName, targetPrice) {
 
         </header>
             <div class = "priceCardFlex">
-                <div id = 'priceNameHeader'><a href="${url}">${inputName}</a></div>
-                <p id="bodyText">Current Price: </p>
-                <p id="bodyText">Target Price: $${targetPrice}</p>
+                <button class = "deleteButton">× </button>
+                <p id = "priceNameHeader"><a href="${url}">${inputName}</a></p>
+                <p class="bodyText">Current Price: </p>
+                <p class="bodyText">Target Price: $${targetPrice}</p>
             </div>
         </div>
     </article>
