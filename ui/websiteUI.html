@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="UTF-8" />
+        <link href="websiteUIStyles.CSS" rel="stylesheet" type="text/css" />
+        <title>Price Tracker</title>
+        <script src="script.js" defer></script>
+    </head>
+	
+    <body>
+        <div id ="leftDiv">
+            <h2>Price Tracker</h2>
+            <p id="bodyText">Enter Shopify URL:</p>
+            <div class = "searchBox"> 
+                <input id="url" class="searchPill"></input>       
+                <button id="add-button" class="addButton">
+                    +
+                </button>
+            </div>
+            <br/>
+            <div id = "optionsBox">
+                <div class = "optionsLabels">
+                    <p id="bodyText">Current Price: </p>
+                    <p id="bodyText">Target Price:</p>
+                    <p id="bodyText">Name of Item:</p>
+                    <p></p>
+                </div>
+
+                <div class = "optionsInputs">
+                    <p id="bodyText">$xxx.xx</p>
+                    <input id = "targetPrice"></input>
+                    <input id = "inputName"></input>
+                    <button id ="optionsConfirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <div id ="rightDiv">
+            <h2>Tracked Prices</h2>
+            <p id="bodyText">
+            
+            </p>
+            
+            <div id="grid-container" >
+                <div id= "cards">
+                    <!-- <article class="card">
+                        <header>
+                            <div class = "priceCompPill">Above Target Price</div>
+                            <div id = 'priceNameHeader'>Name</div>
+                        </header>
+                        <div id="priceCardFlex">
+                            <div class = "optionsLabels">
+                                <p id="bodyText">Current Price: </p>
+                                <p id="bodyText">Target Price:</p>
+                                <p id="bodyText">Price Delta:</p>
+                            </div>
+                            <div class = "priceCardOutputs">
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                            
+                    </article> -->
+                            
+                </div>
+            </div>
+
+        </div>
+    </body>
+	
+</html>
