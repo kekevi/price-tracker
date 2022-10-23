@@ -6,7 +6,8 @@ import sys
 
 domain_database_cache = {
     'www.target.com': '[data-test="product-price"]',
-    'www.sephora.com': '[data-comp="Price "] b'
+    'www.sephora.com': '[data-comp="Price"] b',
+    'www.amazon.com': '.a-color-price.header-price.a-text-normal'
 }
 
 def main():
