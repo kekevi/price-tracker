@@ -4,6 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { parse } = require('csv-parse/sync')
 const createCsvWriter = require('csv-writer').createObjectCsvWriter
+const cors = require('cors')
 
 const PORT_NUM = 3000
 const PYTHON_EXEC = "/Users/siraire/.pyenv/versions/miniforge3/bin/python"
@@ -13,6 +14,7 @@ const DEFAULT_CSV = "/Users/siraire/Code/price-tracker/track.csv"
 
 const app = express()
 app.use(express.urlencoded())
+app.use(cors())
 
 let scraperData = null
 let lastScraped = null

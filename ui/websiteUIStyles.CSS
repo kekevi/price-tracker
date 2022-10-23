@@ -113,7 +113,7 @@ h2 {
     margin: 0 auto;
 }
 
-#targetPrice{
+.optionsRow input {
     height: 1.5em;
     background-color: #D9D9D9;
     border: none;
@@ -121,17 +121,6 @@ h2 {
     font-family: consolas;
     font-size: 1em;
     vertical-align: center;
-    margin: 1em;
-    text-align: center;
-}
-
-#inputName{
-    height: 1.5em;
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 15px;
-    font-family: consolas;
-    font-size: 1em;
     margin: 1em;
     text-align: center;
 }
@@ -170,4 +159,8 @@ h2 {
 
     border-radius: 15px;
     background-color: black;
+}
+
+.isDeal {
+    color: green;
 }
