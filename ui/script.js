@@ -22,17 +22,20 @@ urlBox.addEventListener("input", () => {
     }
 })
 
-function generateCard(inputName, targetPrice) {
+function generateCard(url, inputName, targetPrice) {
+    if (!url.includes('https://') && !url.includes('http://')) {
+        url = 'http://' + url;
+    }
+
     return htmlToElement(`
     <article class="card">
         <header>
-            <div class = "priceCompPill">Above Target Price</div>
-            <div id = 'priceNameHeader'>${inputName}</div>
+
         </header>
-            <div class = "optionsLabels">
+            <div class = "priceCardFlex">
+                <div id = 'priceNameHeader'><a href="${url}">${inputName}</a></div>
                 <p id="bodyText">Current Price: </p>
                 <p id="bodyText">Target Price: $${targetPrice}</p>
-                <p id="bodyText">Price Delta:</p>
             </div>
         </div>
             
@@ -41,5 +44,5 @@ function generateCard(inputName, targetPrice) {
 }
 
 document.getElementById('optionsConfirm').addEventListener('click', () => {
-    document.getElementById('grid-container').appendChild(generateCard(inputBox.value, document.getElementById("targetPrice").value))
+    document.getElementById('grid-container').appendChild(generateCard(urlBox.value, inputBox.value, document.getElementById("targetPrice").value))
 })

@@ -49,21 +49,7 @@ h2 {
 }
 
 .searchPill {
-    width: 95%;
-    height: 30px;
-
-    background: #FFFFFF;
-    border-radius: 15px ;
-    border: none;
-    
-    font-family: consolas;
-    font-size: 1em;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.addButton{
-    width: 30px;
+    width: 100%;
     height: 30px;
 
     background: #FFFFFF;
@@ -84,8 +70,8 @@ h2 {
 }
 
 .searchBox div{
-    width = 100%;
-    height = 30px;
+    width: 100%;
+    height: 30px;
 }
 
 #optionsBox{
@@ -167,12 +153,9 @@ h2 {
     padding-bottom: 5px;
 }
 
-#priceCardFlex{
+.priceCardFlex{
     display: flex;
     flex-direction: row;
-}
-
-#priceCardOutputs{
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
