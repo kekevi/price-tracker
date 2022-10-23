@@ -1,0 +1,24 @@
+{
+  "name": "price-tracker",
+  "version": "1.0.0",
+  "description": "Price-track any website with just a few simple inputs!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kekevi/price-tracker.git"
+  },
+  "author": "Kevin and Arnold Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kekevi/price-tracker/issues"
+  },
+  "homepage": "https://github.com/kekevi/price-tracker#readme",
+  "dependencies": {
+    "csv": "^6.2.1",
+    "csv-writer": "^1.6.0",
+    "express": "^4.18.2"
+  }
+}

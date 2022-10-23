@@ -2,6 +2,7 @@ import json
 from scrape import delegate_find_price, Conditions
 from urllib.parse import urlparse
 import csv
+import sys
 
 domain_database_cache = {
     'www.target.com': '[data-test="product-price"]',
@@ -9,12 +10,17 @@ domain_database_cache = {
 }
 
 def main():
-    with open('track.csv') as file:
+    if len(sys.argv) <= 1:
+        print("Expected argument of file path to csv.")
+        exit(1)
+    
+    filepath = sys.argv[1]
+    with open(filepath) as file:
         reader = csv.reader(file, delimiter=',')
         log = []
         next(reader, None) # skip header
         for row in reader:
-            name, url, selector = row
+            name, url, selector, *_ = row
             hostname = urlparse(url).hostname
             if not selector and hostname in domain_database_cache:
                 selector = domain_database_cache[hostname]
@@ -25,6 +31,7 @@ def main():
                 'message': cond.value
             })
         print(json.dumps(log))
+        sys.stdout.flush()
 
 
 if __name__ == '__main__':
