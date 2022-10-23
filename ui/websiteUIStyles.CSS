@@ -7,6 +7,7 @@ body {
     margin: 0;
     display: flex;
     height: 100%;
+    font-family: 'Consolas', monospace;
 }
 
 #leftDiv {
@@ -30,7 +31,7 @@ h2 {
     font-family: consolas;
 }
 
-#bodyText {
+.bodyText {
     font-family: consolas;
     font-size: 1em;
 }
@@ -49,9 +50,8 @@ h2 {
 }
 
 .searchPill {
-    width: 100%;
     height: 30px;
-
+    width: 100%;
     background: #FFFFFF;
     border-radius: 15px ;
     border: none;
@@ -67,6 +67,8 @@ h2 {
     align-items: center;
     justify-content: left;
     gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .searchBox div{
@@ -75,44 +77,44 @@ h2 {
 }
 
 #optionsBox{
-    visibility: hidden;
     background-color: #FFFFFF;
     border-radius: 15px;
-    display:flex;
-    flex-direction: row;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.optionsLabels{
+.optionsRow {
     display: flex;
-    padding: 15px;
-    flex-direction: column;
-    align-items: flex-end;
-    vertical-align: center;
-}
-
-.optionsInputs{
-    padding: 15px;
-    display:flex;
-    flex: 50%;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
-#optionsConfirm{
-    height: 30px;
+.optionsRow input {
+    flex: 1;
+}
 
+.button {
+    height: 30px;
     text-align: center;
     background-color: black;
     font-family: consolas;
     font-size: 1em;
     color: white;
-
     border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#optionsConfirm{
+    width: 30%;
+    margin: 0 auto;
 }
 
 #targetPrice{
-    width:90%;
-    height: 1em;
+    height: 1.5em;
     background-color: #D9D9D9;
     border: none;
     border-radius: 15px;
@@ -124,8 +126,7 @@ h2 {
 }
 
 #inputName{
-    width: 90%;
-    height: 1em;
+    height: 1.5em;
     background-color: #D9D9D9;
     border: none;
     border-radius: 15px;

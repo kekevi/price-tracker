@@ -16,9 +16,9 @@ const inputBox = document.getElementById('inputName')
 urlBox.addEventListener("input", () => {
     //alert(urlBox.value)
     if (urlBox.value == '') {
-        optionsBox.style.visibility = 'hidden'
+        optionsBox.style.display = 'none'
     } else {
-        optionsBox.style.visibility = 'visible'
+        optionsBox.style.display = 'flex'
     }
 })
 
@@ -38,7 +38,6 @@ function generateCard(url, inputName, targetPrice) {
                 <p id="bodyText">Target Price: $${targetPrice}</p>
             </div>
         </div>
-            
     </article>
     `)
 }

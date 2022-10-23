@@ -12,31 +12,32 @@
     <body>
         <div id ="leftDiv">
             <h2>Price Tracker</h2>
-            <p id="bodyText">Enter Shopify URL:</p>
+            <label for="url" class="bodyText">Enter product URL:</label>
             <div class = "searchBox"> 
                 <input id="url" class="searchPill"></input>       
             </div>
-            <br/>
             <div id = "optionsBox">
-                <div class = "optionsLabels">
-                    <p id="bodyText">Current Price: </p>
-                    <p id="bodyText">Target Price:</p>
-                    <p id="bodyText">Name of Item:</p>
-                    <p></p>
+                <div class="optionsRow">
+                    <label for="targetPrice" class="bodyText">Target Price:</label>
+                    <input type="number" min="0" id="targetPrice"></input>
                 </div>
-
-                <div class = "optionsInputs">
-                    <p id="bodyText">$xxx.xx</p>
-                    <input id = "targetPrice"></input>
-                    <input id = "inputName"></input>
-                    <button id ="optionsConfirm">Confirm</button>
+                <div class="optionsRow">
+                    <label for="inputName" class="bodyText">Name of Item:</label>
+                    <input id="inputName"></input>
                 </div>
+                <button id ="optionsConfirm" class="button">Confirm</button>
             </div>
+            <div id="button-row">
+                <button id="load-btn" class="button">Load</button>
+                <button id="store-btn" class="button">Store</button>
+                <button id="refresh-btn" class="button">Refresh</button>
+            </div>
+            <p>Last updated: <span id="cachedtime">never</span></p>
         </div>
 
         <div id ="rightDiv">
             <h2>Tracked Prices</h2>
-            <p id="bodyText">
+            <p class="bodyText">
             
             </p>
             
